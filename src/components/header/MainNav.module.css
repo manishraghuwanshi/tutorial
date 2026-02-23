@@ -1,0 +1,107 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--green);
+  height: var(--header-height);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+.logoW {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  letter-spacing: -1px;
+}
+.logoSchools {
+  background: var(--white);
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* Desktop nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.navLink {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: background .15s;
+  white-space: nowrap;
+}
+.navLink:hover { background: rgba(255,255,255,.18); text-decoration: none; }
+
+/* Search */
+.searchWrap { margin-left: auto; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+  margin-left: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+}
+
+/* Mobile menu */
+.mobileMenu {
+  background: var(--green-dark);
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+.mobileLink {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.mobileLink:hover { background: rgba(0,0,0,.1); text-decoration: none; }
+
+@media (max-width: 768px) {
+  .nav, .searchWrap { display: none; }
+  .hamburger { display: flex; }
+  .header { height: var(--header-height); }
+}

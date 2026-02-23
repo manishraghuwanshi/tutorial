@@ -1,0 +1,49 @@
+.topBar {
+  background: var(--navy);
+  color: #ccc;
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.promo strong { color: var(--yellow); }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color .15s;
+}
+.link:hover { color: #fff; text-decoration: none; }
+
+.btnSignUp {
+  background: var(--green);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background .15s;
+}
+.btnSignUp:hover { background: var(--green-dark); text-decoration: none; }
+
+@media (max-width: 600px) {
+  .promo { display: none; }
+}
