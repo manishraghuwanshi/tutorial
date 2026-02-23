@@ -1,26 +1,59 @@
-@import "tailwindcss";
+/* ============================================
+   W3Schools Skeleton — Global Styles
+   ============================================ */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --green:        #04aa6d;
+  --green-dark:   #03945f;
+  --green-light:  #e8f8f2;
+  --navy:         #282a35;
+  --navy-light:   #363848;
+  --white:        #ffffff;
+  --off-white:    #f8f9fa;
+  --border:       #e0e0e0;
+  --text:         #404040;
+  --text-muted:   #767676;
+  --code-bg:      #282a35;
+  --code-text:    #f8f8f2;
+  --yellow:       #ffdd57;
+
+  /* Layout */
+  --sidebar-width:    282px;
+  --header-height:    56px;
+  --topbar-height:    40px;
+
+  /* Typography */
+  --font-sans:    'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-mono:    'Source Code Pro', 'Courier New', monospace;
+
+  /* Radius / Shadow */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --shadow-sm:  0 1px 4px rgba(0,0,0,.08);
+  --shadow-md:  0 2px 12px rgba(0,0,0,.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { cursor: pointer; font-family: inherit; }
+
+/* Utility */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
 }
