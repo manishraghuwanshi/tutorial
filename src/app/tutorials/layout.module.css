@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  min-height: calc(100vh - var(--header-height) - var(--topbar-height));
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px 40px 80px;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .wrapper { flex-direction: column; }
+  .content { padding: 24px 16px; }
+}
